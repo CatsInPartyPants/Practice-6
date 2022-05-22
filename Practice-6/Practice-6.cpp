@@ -108,4 +108,47 @@ int main()
 	*/
 
 
+	//int number;
+	//cin >> number;
+	//for (int i = 0; i <= number; i++) { cout << i << " "; }
+
+	/*
+	int n1, n2,result =0;
+	cin >> n1;
+	cin >> n2;
+
+	for (int i = min(n1, n2); i <= max(n1, n2); i++) {
+		result += i;
+	}
+	cout << result;
+	*/
+
+	/*
+	int a, summa=0;
+	cin >> a;
+	for (; a != 0 && a != 7;summa +=a) {
+		cin >> a;
+	}
+	cout << summa;
+	*/
+
+	int n1, n2;
+	cout << "Введите первое число ->";
+	cin >> n1;
+	cout << "Введите второе число ->";
+	cin >> n2;
+	
+	cout << "Выводим четные:";
+	for (int i = min(n1, n2), j = max(n1,n2); i <= j; i++) {
+		if (i % 2 == 0) cout << i << " ";
+	}
+	cout << "Выводим нечетные:";
+	for (int i = min(n1, n2), j = max(n1, n2); i <= j; i++) {
+		if (i % 2 != 0) cout << i << " ";
+	}
+	cout << "Выводим кратные 7:";
+	for (int i = min(n1, n2), j = max(n1, n2); i <= j; i++) {
+		if (i % 7 == 0) cout << i << " ";
+	}
+
 }
