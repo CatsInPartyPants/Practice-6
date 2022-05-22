@@ -132,6 +132,8 @@ int main()
 	cout << summa;
 	*/
 
+	/*
+
 	int n1, n2;
 	cout << "Введите первое число ->";
 	cin >> n1;
@@ -150,5 +152,52 @@ int main()
 	for (int i = min(n1, n2), j = max(n1, n2); i <= j; i++) {
 		if (i % 7 == 0) cout << i << " ";
 	}
+	*/
+	
+int computerNumber=0, userNumber=0, numberOfCounts=0;
+long long time_final, time_start, time_end;
+cout << "Игра угадай число\n";
+cout << "Загадано число в диапазоне от 1  до 500\n";
+cout << "Предположите какое это число?\n";
+srand(time(NULL));
+computerNumber = rand()%500; // rand()%(Y-X) + X
+time_start = time(NULL);
+while (1) {
+	cin >> userNumber;
+	if (userNumber == computerNumber) {
+		time_end = time(NULL);
+		time_final = time_end - time_start;
+		numberOfCounts++;
+		cout << "Правильно!\n";
+		cout << "Были использованы " << numberOfCounts << " попыток!";
+		cout << "Вы затратили на отгадывание числа " << time_final << " секунд";
+		break;
+	}
+	else if (userNumber == 0) {
+		cout << "Вы сдались!";
+		break;
+	}
+	else if (userNumber < computerNumber) {
+		cout << "Загаданное число больше вашего!\n";
+		numberOfCounts++;
+	}
+	else if (userNumber > computerNumber) {
+		cout << "Загаданное число меньше вашего вашего!\n";
+		numberOfCounts++;
+	}
+}
+/*
+int num_user, rand_num_computer, counter = 0;
+int time_final, time_star, time_end;
+srand(time(NULL));
+rand_num_computer = rand()% 500;
+do {
+	counter++;
+	cout << "Введите число: ";
+	cin >> num_user;
+	if (num_user > rand_num_computer) cout << "Загаданное число меньше\n";
+	else if (num_user < rand_num_computer) cout << "Загаданное число больше\n";
+} while (num_user != rand_num_computer && num_user != 0);
+*/
 
 }
