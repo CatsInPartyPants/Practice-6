@@ -202,45 +202,15 @@ while (1) {
 	} while (num_user != rand_num_computer && num_user != 0);
 	*/
 
-int userSelect, countOfDollar, countOfEuro, countOfRubles;
-
 while (1) {
 	cout << "Программа-конвертер валют\n"
 		<< "\tМеню:\n"
 		<< "\t\t1. Узнать курс доллара\n"
 		<< "\t\t2. Узнать курс евро\n"
-		<< "\t\t3. Перевести рубли в доллары\n"
-		<< "\t\t4. Перевести рубли в евро\n"
-		<< "\t\t5. Перевести доллары в рубли\n"
-		<< "\t\t6. Перевести евро в рубли\n"
-		<< "\t\t0. Выход\n";
-	cin >> userSelect;
-	if (userSelect == 1) {
-		cout << "Курс доллара 62 рубля.\n";
-	}
-	else if (userSelect == 2) {
-		cout << "Курс евро 65 рублей.\n";
-	}
-	else if (userSelect == 3) {
-		cout << "Перевести рубли в доллары, укажите какое количество рублей переводим в доллары?\n";
-		cin >> countOfRubles;
-		cout << "Это будет стоить " << countOfDollar * 62 << " рублей!\n";
-	}
-	else if (userSelect == 4) {
-		cout << "Какое количество евро Вы хотите купить?\n";
-		cin >> countOfEuro;
-		cout << "Это будет стоить " << countOfEuro * 65 << " рублей!\n";
-	}
-	else if (userSelect == 5) {
-		cout << "Какое количество долларов вы хотите продать?\n";
-		cin >> countOfDollar;
-		cout << "Это будет стоить " << countOfDollar * 62 << " рублей!\n";
-	}
-	else if (userSelect == 6) {
-		cout << "Какое количество евро вы хотите продать?\n";
-		cin >> countOfEuro;
-		cout << "Это будет стоить " << countOfEuro * 65 << " рублей!\n";
-	}
+		<< "\t\t3. Купить доллары\n"
+		<< "\t\t4. Купить евро\n"
+		<< "\t\t5. Продать доллары\n"
+		<< "\t\t6. Продать евро\n";
 }
 
 }
