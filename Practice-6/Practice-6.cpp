@@ -202,7 +202,8 @@ while (1) {
 	} while (num_user != rand_num_computer && num_user != 0);
 	*/
 
-int userSelect, countOfDollar, countOfEuro, countOfRubles;
+double userSelect, temp;
+char userAnswer;
 
 while (1) {
 	cout << "Программа-конвертер валют\n"
@@ -217,29 +218,92 @@ while (1) {
 	cin >> userSelect;
 	if (userSelect == 1) {
 		cout << "Курс доллара 62 рубля.\n";
+
+		cout << "Продолжить? y/n\n";
+		cin >> userAnswer;
+		if (userAnswer == 'y') {
+			system("CLS");
+			continue;
+		}
+		else {
+			break;
+		}
 	}
 	else if (userSelect == 2) {
 		cout << "Курс евро 65 рублей.\n";
+
+		cout << "Продолжить? y/n\n";
+		cin >> userAnswer;
+		if (userAnswer == 'y') {
+			system("CLS");
+			continue;
+		}
+		else {
+			break;
+		}
 	}
 	else if (userSelect == 3) {
 		cout << "Перевести рубли в доллары, укажите какое количество рублей переводим в доллары?\n";
-		cin >> countOfRubles;
-		cout << "Это будет стоить " << countOfDollar * 62 << " рублей!\n";
+		cin >> temp;
+		cout << "Вы получите " << temp / 62 << " долларов!\n";
+
+		cout << "Продолжить? y/n\n";
+		cin >> userAnswer;
+		if (userAnswer == 'y') {
+			system("CLS");
+			continue;
+		}
+		else {
+			break;
+		}
 	}
 	else if (userSelect == 4) {
-		cout << "Какое количество евро Вы хотите купить?\n";
-		cin >> countOfEuro;
-		cout << "Это будет стоить " << countOfEuro * 65 << " рублей!\n";
+		cout << "Перевести рубли в евро, укажите какое количество рублей переводим в евро?\n";
+		cin >> temp;
+		cout << "Вы получите  " << temp / 65 << " евро!\n";
+
+		cout << "Продолжить? y/n\n";
+		cin >> userAnswer;
+		if (userAnswer == 'y') {
+			system("CLS");
+			continue;
+		}
+		else {
+			break;
+		}
 	}
 	else if (userSelect == 5) {
 		cout << "Какое количество долларов вы хотите продать?\n";
-		cin >> countOfDollar;
-		cout << "Это будет стоить " << countOfDollar * 62 << " рублей!\n";
+		cin >> temp;
+		cout << "Вы получите за это " << temp * 62 << " рублей!\n";
+
+		cout << "Продолжить? y/n\n";
+		cin >> userAnswer;
+		if (userAnswer == 'y') {
+			system("CLS");
+			continue;
+		}
+		else {
+			break;
+		}
 	}
 	else if (userSelect == 6) {
 		cout << "Какое количество евро вы хотите продать?\n";
-		cin >> countOfEuro;
-		cout << "Это будет стоить " << countOfEuro * 65 << " рублей!\n";
+		cin >> temp;
+		cout << "Вы получите за это " << temp * 65 << " рублей!\n";
+
+		cout << "Продолжить? y/n\n";
+		cin >> userAnswer;
+		if (userAnswer == 'y') {
+			system("CLS");
+			continue;
+		}
+		else {
+			break;
+		}
+	}
+	else if (userSelect == 0) {
+		break;
 	}
 }
 
